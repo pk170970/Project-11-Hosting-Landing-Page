@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+*::before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FDFEFF;
+    overflow-x: hidden;
+}
+
+/* -------------------------Navigation Section------------------------------------- */
+
+nav {
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+}
+
+nav img {
+    width: 8vw;
+    height: 6vh;
+    margin-top: 2em;
+    margin-left: 5em;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    width: 65vw;
+    margin-left: 16em;
+
+}
+
+.list-item:first-child {
+    color: black;
+}
+
+
+.list-item {
+    text-decoration: none;
+    margin-left: 2em;
+    font-size: 1.3rem;
+    color: #909091;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    color: black;
+    font-weight: bold;
+}
+
+
+.button {
+    border: 3px solid #94c8f2;
+    color: #329cf2;
+    font-weight: bold;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #329cf2;
+    color: white;
+}
+
+/* --------------------------------------Sections 1,2,3--------------------------------------- */
+
+
+/* --------------------------------Common CSS------------------------ */
+.section {
+    /* background-color: red; */
+    height: 90vh;
+    margin-top: 2em;
+    display: flex;
+}
+
+.content-left {
+    /* background-color: blue; */
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-right {
+    /* background-color: grey; */
+    width: 50vw;
+    height: 75vh;
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 4rem;
+    margin-left: 1.3em;
+}
+
+.detail {
+    color: #878787;
+    font-size: 1.3rem;
+    margin-right: 7.5em;
+    margin-top: 2em;
+    margin-left: 4em;
+    line-height: 1.5;
+}
+
+.btn {
+    width: 11vw;
+    height: 7vh;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(180deg, hsl(186deg 100% 63%) 0%, hsla(217, 100%, 50%, 1) 100%);
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: black;
+}
+
+/* --------------------Section-1------------------------ */
+
+.button1 {
+    margin-left: 4em;
+    margin-top: 2em;
+}
+
+.content1-right img {
+    width: 44vw;
+    height: 72vh;
+    margin-top: 4em;
+}
+
+/* --------------------Section-2------------------------ */
+
+.button2 {
+    margin-left: 4em;
+    margin-top: 2em;
+}
+
+.content2-left img {
+    width: 44vw;
+    height: 72vh;
+    margin-top: 0em;
+}
+
+/* --------------------Section-3------------------------ */
+
+.button3 {
+    margin-left: 4em;
+    margin-top: 2em;
+}
+
+.content3-right img {
+    width: 44vw;
+    height: 72vh;
+    margin-top: -3em;
+}
+
+
+
+/* ------------------------------------------Service-section------------------------ */
+
+.services-section {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.service-content {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: blue; */
+    height: 30vh;
+}
+
+.service-content h1 {
+    font-size: 3rem;
+    margin-left: 1.4em;
+    margin-top: 1em;
+    color: #1D2B4F;
+}
+
+.service-para {
+    color: #878787;
+    font-size: 1.3rem;
+    margin-right: 9.5em;
+    margin-top: 2.8em;
+    line-height: 1.5;
+    width: 46vw;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 2em;
+    column-gap: 2em;
+    /* background-color: red; */
+    padding-top: 5em;
+    padding-left: 5em;
+}
+
+.service img {
+    width: 8vw;
+    height: 6vh;
+    margin-bottom: 2em;
+}
+
+.service h3 {
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-left: 2em;
+}
+
+.service p {
+    color: #878787;
+    margin-left: 2.1em;
+}
+
+
+/* ----------------------------------------Payment Section-------------------------------------------------- */
+
+.pricing {
+    background: linear-gradient(180deg, hsl(198deg 100% 62%) 0%, hsla(217, 100%, 50%, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 135vh;
+    margin-bottom: 3em;
+}
+
+
+.pricing h1 {
+    color: #fff;
+    font-size: 3em;
+    margin-top: 1.8em;
+}
+
+.pricing-cards {
+    display: flex;
+    background-color: transparent;
+    margin-top: 4em;
+    width: 85vw;
+    height: 99vh;
+    justify-content: space-around;
+}
+
+.pricing-card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 27vw;
+    padding: 3em;
+    border-radius: 10px;
+
+}
+
+.pricing-card h2 {
+    font-weight: bold;
+}
+
+.pricing-card>p {
+    color: #878787;
+    margin-top: 1em;
+}
+
+.active-card {
+    color: #fff;
+    background-color: #353535;
+    width: 27vw;
+    height: 20vh;
+    margin-top: -3em;
+    margin-left: -3em;
+    border-radius: 10px;
+    padding: 2em;
+}
+
+.active-card h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.7em;
+}
+
+.packages {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.package {
+    display: flex;
+    margin-top: 1em;
+}
+
+.package img {
+    padding: 0 1em;
+    width: 70px;
+    height: 30px;
+}
+
+.pricing-card h3 {
+    text-align: center;
+    margin-top: 3em;
+    font-size: 2em;
+}
+
+.pricing-card h3 span {
+    color: #878787;
+}
+
+.pricing-card h3+p {
+    text-align: center;
+}
+
+.payment-button {
+    margin: auto;
+}
+
+.btn-payment {
+    padding: 0.9em 2.5em;
+    border-radius: 10px;
+
+}
+
+/* ------------------------------------------Feedback section ----------------------------------------------- */
+
+.feedback {
+    /* background-color: red; */
+    height: 135vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feedback h1 {
+    color: #1D2B4F;
+    margin-top: 2em;
+    font-size: 3em;
+}
+
+.feedback h1+p {
+    text-align: center;
+    color: #878787;
+    margin: 1em 20em;
+}
+
+.feedback-messages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2em;
+    columns: 0.5em;
+    /* background-color: blue; */
+
+}
+
+.feedback-message {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 3em 0 3em;
+    border: 1px solid #dddde8;
+    border-radius: 10px;
+    height: 38vh;
+    width: 35vw;
+}
+
+
+.feedback-message>p {
+    padding: 2em;
+}
+
+.profile-detail {
+    background-color: #fff;
+    padding-bottom: 2em;
+}
+
+.profile-detail img {
+    margin-left: 1.8em;
+}
+
+.author-details {
+    float: right;
+    margin-right: 15em;
+}
+
+.author-details p {
+    margin-top: 0.5em;
+}
+
+
+/* ---------------------------------------Registration Section ------------------------------------- */
+
+.registration {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    background: url("../images/footer-bg.svg") no-repeat;
+    height: 50vh;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.registration-content {
+    /* background-color: red; */
+    width: 50vw;
+    padding: 5em;
+    color: #fff;
+}
+
+.registration-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.registration-content p {
+    margin-top: 1em;
+}
+
+.register-button {
+    height: 9vh;
+    width: 12vw;
+    font-size: 1.1em;
+    margin: auto 5em auto 13em;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+/* -------------------------------------------------Footer Section -------------------------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    height: 44vh;
+    margin-top: 15em;
+    /* background-color: red; */
+}
+
+.footer-logo {
+    width: 25vw;
+    line-height: 1.7;
+    color: #878787;
+}
+
+.footer-logo img {
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.sub-footer {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #fff; */
+
+}
+
+.sub-footer h4 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.sub-footer a {
+    text-decoration: none;
+    color: #878787;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.sub-footer a:hover {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.social-media-section {
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    text-align: center;
+}
+
+.social-media-section h4 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.social-media-section img {
+    width: 30px;
+    height: 30px;
+    margin: 2em 0 0 0.5em;
+    cursor: pointer;
+}
+
+.social-media-section img:hover {
+    border: 2px solid black;
+    border-radius: 51%;
+}
+
+/* --------------------------------------------End --------------------------------------------------------- */
