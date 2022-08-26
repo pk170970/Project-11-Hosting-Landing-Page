@@ -10,32 +10,36 @@
     scroll-behavior: smooth;
 }
 
+html {
+    font-size: 14px;
+}
+
 body {
     background-color: #FDFEFF;
-    overflow-x: hidden;
 }
 
 /* -------------------------Navigation Section------------------------------------- */
 
 nav {
     display: flex;
-    width: 100vw;
-    height: 15vh;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1em 2em;
+    align-items: center;
+
 }
 
 nav img {
-    width: 8vw;
-    height: 6vh;
-    margin-top: 2em;
-    margin-left: 5em;
+    width: 30%;
+    max-width: 150px;
+    height: 20%;
+    
 }
 
 .list {
     display: flex;
     align-items: center;
-    width: 65vw;
-    margin-left: 16em;
-
+    gap: 2em;
 }
 
 .list-item:first-child {
@@ -45,7 +49,6 @@ nav img {
 
 .list-item {
     text-decoration: none;
-    margin-left: 2em;
     font-size: 1.3rem;
     color: #909091;
     cursor: pointer;
@@ -57,65 +60,74 @@ nav img {
 }
 
 
-.button {
-    border: 3px solid #94c8f2;
-    color: #329cf2;
-    font-weight: bold;
-    padding: 0.5em;
-    border-radius: 0.5em;
-    cursor: pointer;
-}
+
 
 .button:hover {
     background-color: #329cf2;
     color: white;
 }
 
-/* --------------------------------------Sections 1,2,3--------------------------------------- */
+
+@media (max-width:1100px) {
+    .list a:not(button) {
+        display: none;
+    }
+
+    nav img {
+        width: 15%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width:700px) {
+    nav img {
+        width: 25%;
+        max-width: 350px;
+    }
+
+    .button {
+        font-size: 1em;
+    }
+}
 
 
-/* --------------------------------Common CSS------------------------ */
-.section {
-    /* background-color: red; */
-    height: 90vh;
-    margin-top: 2em;
+
+/* -------------------------------Section 1,2,3----------------------- */
+.hero {
     display: flex;
+    padding: 2em;
+    margin: 2em 0;
+    flex-direction: row;
 }
 
 .content-left {
-    /* background-color: blue; */
-    width: 50vw;
-    height: 75vh;
     display: flex;
     flex-direction: column;
+    width: 50%;
+    gap: 1.5em;
 }
 
 .content-right {
-    /* background-color: grey; */
-    width: 50vw;
-    height: 75vh;
-    object-fit: contain;
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
     flex-direction: column;
+    gap: 1.5em;
 }
 
 .heading {
     font-size: 4rem;
-    margin-left: 1.3em;
+    line-height: 1.3;
 }
 
 .detail {
     color: #878787;
     font-size: 1.3rem;
-    margin-right: 7.5em;
-    margin-top: 2em;
-    margin-left: 4em;
     line-height: 1.5;
 }
 
 .btn {
-    width: 11vw;
-    height: 7vh;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -123,82 +135,100 @@ nav img {
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
+    padding: 1em;
+    width: 20%;
+    min-width: 150px;
 }
 
 .btn:hover {
     color: black;
 }
 
-/* --------------------Section-1------------------------ */
-
-.button1 {
-    margin-left: 4em;
-    margin-top: 2em;
+.content-right img {
+    width: 80%;
+    align-self: center;
 }
 
-.content1-right img {
-    width: 44vw;
-    height: 72vh;
-    margin-top: 4em;
+.section-reverse {
+    flex-direction: row-reverse;
 }
 
-/* --------------------Section-2------------------------ */
+@media (max-width:1100px) {
+    .hero {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 1em;
+        margin: 1em 0;
+        gap: 2em;
+    }
 
-.button2 {
-    margin-left: 4em;
-    margin-top: 2em;
+    .content-left {
+        width: 100%;
+    }
+
+    .content-left button {
+        width: 20%;
+        font-size: 1rem;
+    }
+
+    .content-right {
+        width: 100%;
+    }
+
+    .content-right img {
+        align-self: center;
+        width: 60%;
+    }
+
 }
 
-.content2-left img {
-    width: 44vw;
-    height: 72vh;
-    margin-top: 0em;
+@media (max-width:600px) {
+    .heading {
+        font-size: 3rem;
+    }
+
+    .content-left {
+        text-align: center;
+    }
+
+    .content-left button {
+        align-self: center;
+    }
 }
 
-/* --------------------Section-3------------------------ */
-
-.button3 {
-    margin-left: 4em;
-    margin-top: 2em;
+@media (max-width:450px) {
+    .heading {
+        font-size: 2rem;
+    }
 }
-
-.content3-right img {
-    width: 44vw;
-    height: 72vh;
-    margin-top: -3em;
-}
-
 
 
 /* ------------------------------------------Service-section------------------------ */
 
 .services-section {
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
+    padding: 2em;
+    margin: 2em 0;
+    gap: 4em;
 }
 
 .service-content {
     display: flex;
-    justify-content: space-between;
-    /* background-color: blue; */
-    height: 30vh;
+    justify-content: space-around;
+    gap: 3em;
 }
 
 .service-content h1 {
     font-size: 3rem;
-    margin-left: 1.4em;
-    margin-top: 1em;
     color: #1D2B4F;
 }
 
 .service-para {
     color: #878787;
     font-size: 1.3rem;
-    margin-right: 9.5em;
-    margin-top: 2.8em;
     line-height: 1.5;
-    width: 46vw;
+    width: 50%;
 }
 
 .services {
@@ -207,113 +237,177 @@ nav img {
     grid-template-rows: 1fr 1fr 1fr;
     row-gap: 2em;
     column-gap: 2em;
-    /* background-color: red; */
-    padding-top: 5em;
-    padding-left: 5em;
+    place-items : center;
+    align-items: flex-start;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 3em;
 }
 
 .service img {
-    width: 8vw;
-    height: 6vh;
-    margin-bottom: 2em;
+    width: 15%;
 }
 
 .service h3 {
     font-weight: bold;
-    margin-bottom: 1em;
-    margin-left: 2em;
+    font-size: 1.5rem;
 }
 
 .service p {
     color: #878787;
-    margin-left: 2.1em;
 }
 
+@media (max-width:1000px) {
 
-/* ----------------------------------------Payment Section-------------------------------------------------- */
+    .service-content {
+        flex-direction: column;
+    }
+    .service-content {
+        gap: 2em;
+    }
+    .service {
+        width: 100%;
+       
+    }
+
+}
+
+@media (max-width:600px) {
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service {
+        width: 100%;
+        align-self: center;
+    }
+    .service img {
+        width: 25%;
+    }
+    .service-content h1{
+        font-size: 2rem;
+    }
+    .service-para{
+        width: 100%;
+    }
+}
+
+@media (max-width:400px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .service {
+        align-items: center;
+    }
+    .service-content{
+        text-align: center;
+    }
+    .service-content h1{
+        font-size: 1.5rem;
+    }
+}
+
+/* --------------------Payment Section----------------------*/
+
 
 .pricing {
     background: linear-gradient(180deg, hsl(198deg 100% 62%) 0%, hsla(217, 100%, 50%, 1) 100%);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 135vh;
-    margin-bottom: 3em;
+    padding: 5em;
+    margin: 2em 0em;
+    gap: 5em;
+    flex-direction: column;
 }
 
 
 .pricing h1 {
     color: #fff;
     font-size: 3em;
-    margin-top: 1.8em;
 }
+
 
 .pricing-cards {
     display: flex;
     background-color: transparent;
-    margin-top: 4em;
-    width: 85vw;
-    height: 99vh;
     justify-content: space-around;
+    width: 100%;
+    gap: 1.5em;
 }
 
 .pricing-card {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    width: 27vw;
-    padding: 3em;
     border-radius: 10px;
+    align-items: center;
+    gap: 1em;
+    padding-bottom: 2em;
+    width: 28%;
+}
 
+.price-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    border-radius: 10px;
+    padding: 2em;
 }
 
 .pricing-card h2 {
     font-weight: bold;
+    font-size: 1.8em;
 }
 
 .pricing-card>p {
     color: #878787;
-    margin-top: 1em;
+    font-size: 1.2em;
 }
 
 .active-card {
     color: #fff;
     background-color: #353535;
-    width: 27vw;
-    height: 20vh;
-    margin-top: -3em;
-    margin-left: -3em;
     border-radius: 10px;
-    padding: 2em;
 }
 
-.active-card h2 {
-    margin-top: 0.5em;
-    margin-bottom: 0.7em;
-}
+/* .active-card h2 {
+
+} */
 
 .packages {
     display: flex;
     flex-direction: column;
-    margin-top: 2em;
+    justify-content: center;
+    gap: 1em;
+    padding-bottom: 2em;
+    align-items: center;
+
 }
 
 .package {
     display: flex;
-    margin-top: 1em;
+    gap: 1em;
+    flex-direction: row;
+    width: 80%;
 }
 
 .package img {
-    padding: 0 1em;
-    width: 70px;
-    height: 30px;
+    width: 10%;
+}
+
+.package p {
+    font-size: 1.rem;
 }
 
 .pricing-card h3 {
     text-align: center;
-    margin-top: 3em;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 .pricing-card h3 span {
@@ -324,158 +418,274 @@ nav img {
     text-align: center;
 }
 
+
 .payment-button {
-    margin: auto;
+    background-color: none;
 }
 
-.btn-payment {
-    padding: 0.9em 2.5em;
-    border-radius: 10px;
-
+.premium{
+    background-color: #353535;
+    color: white;
 }
 
-/* ------------------------------------------Feedback section ----------------------------------------------- */
+
+@media (max-width:1100px) {
+    .pricing {
+        font-size: 0.8em;
+    }
+
+    .price-title {
+        padding: 1em;
+    }
+    .packages{
+        width: 100%;
+    }
+    .package{
+        width: 100%;
+    }
+
+    .pricing-card{
+        width: 41%;
+    }
+}
+
+@media (max-width:750px) {
+    .pricing {
+        padding: 2em 1em;
+    }
+
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 100%;
+        font-size: 1.5em;
+    }
+    
+    .price-title{
+        text-align: center;
+    }
+
+    
+    .pricing h1{
+        text-align: center;
+    }
+}
+
+/* --------------------------Feedback section ---------------------------- */
 
 .feedback {
-    /* background-color: red; */
-    height: 135vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 5em 2em;
+    gap: 4em;
+}
+
+.feedback-title {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    gap: 0.7em;
 }
 
 .feedback h1 {
     color: #1D2B4F;
-    margin-top: 2em;
     font-size: 3em;
 }
 
 .feedback h1+p {
     text-align: center;
     color: #878787;
-    margin: 1em 20em;
+}
+.feedback p{
+    font-size: 1.2rem;
 }
 
 .feedback-messages {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 2em;
-    columns: 0.5em;
-    /* background-color: blue; */
-
+    display: flex;
+    gap: 4em;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .feedback-message {
     display: flex;
     flex-direction: column;
-    margin: 3em 3em 0 3em;
     border: 1px solid #dddde8;
     border-radius: 10px;
-    height: 38vh;
-    width: 35vw;
+    width: 40%;
+    gap: 2em;
 }
 
 
 .feedback-message>p {
-    padding: 2em;
+    font-size: 1.3em;
+    padding: 1em;
 }
 
 .profile-detail {
-    background-color: #fff;
-    padding-bottom: 2em;
-}
-
-.profile-detail img {
-    margin-left: 1.8em;
-}
-
-.author-details {
-    float: right;
-    margin-right: 15em;
-}
-
-.author-details p {
-    margin-top: 0.5em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 4em;
+    font-size: 1.2em;
 }
 
 
-/* ---------------------------------------Registration Section ------------------------------------- */
+@media (max-width:1000px) {
+
+    .feedback {
+        padding: 1em;
+    }
+
+    .feedback-title {
+        width: 70%;
+    }
+
+    .feedback-messages {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:700px) {
+    .feedback-title {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .feedback-title p{
+        font-size: 1.2em;
+}
+}
+@media (max-width:600px) {
+    .feedback-messages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback-message {
+        width: 100%;
+    }
+}
+
+/* ------------------------Registration Section -------------------- */
 
 .registration {
     display: flex;
     justify-content: space-around;
-    margin: 0;
     background: url("../images/footer-bg.svg") no-repeat;
-    height: 50vh;
-    margin-top: 5em;
-    margin-bottom: 5em;
+    padding: 6em 2em;
 }
 
 .registration-content {
-    /* background-color: red; */
-    width: 50vw;
-    padding: 5em;
+    /* ; */
     color: #fff;
+    width: 40%;
+    gap: 2em;
 }
 
 .registration-content h1 {
     font-size: 3em;
     font-weight: bold;
+
 }
 
 .registration-content p {
-    margin-top: 1em;
+    font-size: 1.2em;
 }
+
 
 .register-button {
-    height: 9vh;
-    width: 12vw;
-    font-size: 1.1em;
-    margin: auto 5em auto 13em;
-    background-color: transparent;
-    border: 2px solid #fff;
+    background: none !important;
     color: #fff;
+    border:2px solid #fff;
+    height: 10%;
+    width: 13%;
+    align-self: center;
 }
 
-/* -------------------------------------------------Footer Section -------------------------------------- */
+@media (max-width:1200px) {
+    .registration-content {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:960px) {
+    .registration-content {
+        font-size: 0.7em;
+    }
+
+    .registration-content p {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width:700px) {
+    .registration {
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        text-align: center;
+        padding: 3em 0;
+    }
+
+    .registration-content {
+        width: 80%;
+    }
+
+    .registration-content h1 {
+        padding-bottom: 1em;
+    }
+
+    .register-button {
+        font-size: 0.7em;
+    }
+}
+
+
+/* --------------------------------Footer Section ---------------------------- */
 
 footer {
     display: flex;
     justify-content: space-around;
-    height: 44vh;
-    margin-top: 15em;
-    /* background-color: red; */
+    padding: 8em 3em;
+    gap: 1em;
 }
 
 .footer-logo {
-    width: 25vw;
-    line-height: 1.7;
-    color: #878787;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 2em;
 }
 
 .footer-logo img {
-    margin-bottom: 1em;
+    width: 30%;
+    max-width: 150px;
     cursor: pointer;
 }
+
 
 .sub-footer {
     display: flex;
     flex-direction: column;
-    /* background-color: #fff; */
-
+    background-color: #fff;
+    gap: 1em;
 }
 
 .sub-footer h4 {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 .sub-footer a {
     text-decoration: none;
     color: #878787;
-    margin-top: 1em;
     cursor: pointer;
+    font-size: 1.2em;
 }
 
 .sub-footer a:hover {
@@ -485,22 +695,25 @@ footer {
 }
 
 .social-media-section {
-    /* background-color: #fff; */
+    background-color: #fff;
     display: flex;
+    gap: 2em;
     flex-direction: column;
-    width: 15vw;
     text-align: center;
+    width: 20%;
 }
 
 .social-media-section h4 {
     font-weight: bold;
     font-size: 1.5em;
 }
-
+.social-media-images{
+    display: flex;
+    justify-content: space-around;
+}
 .social-media-section img {
     width: 30px;
     height: 30px;
-    margin: 2em 0 0 0.5em;
     cursor: pointer;
 }
 
@@ -509,4 +722,47 @@ footer {
     border-radius: 51%;
 }
 
-/* --------------------------------------------End --------------------------------------------------------- */
+@media (max-width:1000px) {
+    footer{
+        font-size: 0.8em;
+    }
+    .footer-logo img{
+        width: 50%;
+    }
+    .social-media-images{
+        width: 100%;
+    }
+}
+
+@media (max-width:700px) {
+    footer{
+        flex-direction: column;
+    }
+    .footer-logo{
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4em;
+        padding-bottom: 2em;
+    }
+    .social-media-section{
+        width: 50%;
+        align-self: center;
+    }
+   
+}
+@media (max-width:500px) {
+    footer{
+        flex-direction: column;
+        padding:  2em;
+    }
+    .footer-logo{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1em;
+    }
+
+}
+/* ---------------------------------End ---------------------------------------- */
